@@ -25,8 +25,3 @@ class Calculadora:
 calc = Calculadora()
 
 print(calc.potencia(5,9))
-
-
-
-
-
