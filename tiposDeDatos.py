@@ -1,23 +1,32 @@
-# numericos
+# Variables numéricas
 entero = 5
 decimal = 5.65
 
-# cadenas de caracteres
+# Cadenas de caracteres
 cadena = "hola"
-cadena2 = 'hola2'  # indiferente
+cadena2 = 'hola2'  # Puedes usar comillas simples o dobles
 
-# colecciones de tipo lista
+# Colecciones de tipo tupla
 tuplas = (1, 4, 6, 3, 6)
+
+# Colecciones de tipo lista
 listas = [1, 4, 6, 3, 6]
 
-# colecciones de tipo objeto o diccionario
+# Colecciones de tipo diccionario
 persona = {
-    "n": "keiner",
-    "xd e": "alvarado",
-    "a": 5
+    "nombre": "Keiner",
+    "apellido": "Alvarado",
 }
 
-# booleana
-true = False
+# Variable booleana
+verdadero = True
+falso = False
 
-print(type(listas))
+# La función type() en Python se utiliza para obtener el tipo de un objeto.
+# Toma un objeto como argumento y devuelve el tipo de ese objeto.
+
+# Utilizando la función type() para obtener el tipo de los objetos
+print(type(entero))  # <class 'int'>
+print(type(cadena))  # <class 'str'>
+print(type(listas))  # <class 'list'>
+print(type(persona))  # <class 'dict'>

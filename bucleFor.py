@@ -1,6 +1,7 @@
+# Solicitamos al usuario que ingrese un valor utilizando la función input
+valor = int(input("Ingresa un número para mostrar su tabla de multiplicar: "))
 
-valor=int(input("Ingresa un numero para mostrar su tabla de multiplicar: "))
-
-for i in range(0, 11): # como sabemos el bucle for nos va a ayudar a repetir un bloque de codigo un numero de veces
-    print(valor,"X",i,"=",valor*i)
-#cuando usamos range es porque le vamos a decir un intervalo en el que va a iterar, en este caso, va de 0 a 11, osea desde 0 hasta 10
+# Utilizamos un bucle for para repetir un bloque de código un número determinado de veces
+for i in range(0, 11):
+    # Dentro del bucle, mostramos el resultado de la multiplicación del valor ingresado por el usuario por el valor de la variable i
+    print(f"{valor} X {i} = {valor * i}")

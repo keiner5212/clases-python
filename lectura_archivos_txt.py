@@ -1,43 +1,35 @@
-
+# Abre un archivo en modo lectura y escritura (r+)
 archivo = open("./ejemplo.txt", "r+")
 
+# Lee el contenido del archivo y reemplaza los saltos de línea por espacios
 contenido = archivo.read().replace("\n", " ").strip(" ")
+# Divide el contenido en una lista de palabras
 contenidoSeparado = contenido.split(" ")
+# Imprime la segunda y cuarta palabra del contenido
 print(contenidoSeparado[1], contenidoSeparado[3])
 
+# Cierra el archivo
 archivo.close()
 
-
+# Abre un archivo en modo lectura y escritura (r+) utilizando la sintaxis with
 with open("./ejemplo.txt", "r+") as archivo:
+    # Lee el contenido del archivo y reemplaza los saltos de línea por espacios
     contenido = archivo.read().replace("\n", " ").strip(" ")
+    # Divide el contenido en una lista de palabras
     contenidoSeparado = contenido.split(" ")
+    # Imprime la segunda y cuarta palabra del contenido
     print(contenidoSeparado[1], contenidoSeparado[3])
 
+# Los modos disponibles para abrir un archivo son:
+# r: modo de lectura. No se puede escribir en el archivo. Si el archivo no existe, se produce un error.
+# w: modo de escritura. No se puede leer el archivo. Si el archivo existe, se sobrescribe. Si no existe, se crea.
+# a: modo de anexado. Permite añadir texto al final de un archivo. Si el archivo no existe, se crea.
+# x: modo de creación exclusiva. Permite crear un nuevo archivo. Si el archivo ya existe, se produce un error.
+# r+: modo de lectura y escritura. Permite leer y escribir en un archivo existente.
 
-#modos individuales
+# En modo de lectura (r), se pueden utilizar los siguientes métodos:
+# read(): devuelve todo el contenido del archivo como una cadena.
+# readline(): devuelve una línea del archivo.
+# readlines(): devuelve una lista donde cada elemento es una línea del archivo.
 
-# r (reading) modo de lectura (no podemos añadir nada al archivo) 
-# (si el archivo no existe va a dar un error)
-
-# w (writing) modo de escritura (no podemos leer la informacion) 
-# (si el archivo existe lo reemplaza, y si no existe lo crea)
-
-# a (append) modo de anexado (añade texto al final de un archivo de texto)
-# (si el archivo no existe lo crea y si existe no lo reemplaza)
-# no puede usar los metodos del modo r
-
-# x (creacion exclusiva) modo de escritura (no podemos leer la informacion) 
-# (si el archivo existe no lo reemplaza, y si no existe lo crea)
-
-
-#modos combinados
-# r+ permite lectura y escritura en un archivo pero este ya debe existir 
-# (la escritura funciona como el modo a) es como combinar el modo r y el a
-
-#modo r
-# read() devuelve todo el texto del archivo como un unico str
-# readline() devuelve una linea de el archivo
-# readlines() devuelve una lista en la que cada elemento es una linea
-
-#modo w
-# write()
+# En modo de escritura (w), se puede utilizar el método write() para escribir en el archivo.

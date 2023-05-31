@@ -1,115 +1,103 @@
-from typing import Any
-
-
 class Pokemon:
     def __init__(self, nombre, tipo, edad):
         self.nombreDelPokemon = nombre
         self.tipoDelPokemon = tipo
         self.edadDelPokemon = edad
 
-    # funcion que define el como se va a mostrar un objeto
-    # si no se pone esta funcion, cuando intentemos imprimir al objeto entero, se va a
-    # imprimir la direccion de memoria del objeto (lo que no nos sirve de mucho)
+    # El método __str__ define cómo se debe representar un objeto como una cadena
+    # Si no se define este método, al intentar imprimir el objeto se mostrará su dirección de memoria
     def __str__(self):
-        return "pokemon: "+self.nombreDelPokemon+" edad: " + str(self.edadDelPokemon)
+        return f"pokemon: {self.nombreDelPokemon} edad: {self.edadDelPokemon}"
 
-    # este metodo define como tenemos que sumar 2 objetos de la misma clase, devolviendo, otro
-    # objeto de esa clase (valga la redundancia)
+    # El método __add__ define cómo se deben sumar dos objetos de la misma clase
+    # En este caso, al sumar dos objetos Pokemon se devuelve un nuevo objeto Pokemon
     def __add__(self, otroPokemon):
         nuevoNombre = self.nombreDelPokemon + " y " + otroPokemon.nombreDelPokemon
         nuevotipo = self.tipoDelPokemon + " y "+otroPokemon.tipoDelPokemon
         nuevoedad = self.edadDelPokemon+otroPokemon.edadDelPokemon
         return Pokemon(nuevoNombre, nuevotipo, nuevoedad)
 
-    # este metodo define como debe comparar 2 objetos de la clase para saber si
-    # son iguales o no
+    # El método __eq__ define cómo se deben comparar dos objetos de la misma clase para saber si son iguales
     def __eq__(self, otroPokemon):
         if self.nombreDelPokemon == otroPokemon.nombreDelPokemon:
             if self.tipoDelPokemon == otroPokemon.tipoDelPokemon:
                 if self.edadDelPokemon == otroPokemon.edadDelPokemon:
                     return True
         return False
-    
-    # este metodo es para decirle a python como saber si un objeto de la clase es less than (menor que)
-    # otro objeto de la clase
-    def __lt__(self,otroPokemon):
+
+    # El método __lt__ define cómo se debe comparar si un objeto es menor que otro objeto de la misma clase
+    def __lt__(self, otroPokemon):
         return self.edadDelPokemon < otroPokemon.edadDelPokemon
-    
-    # este metodo es para decirle a python como saber si un objeto de la clase es 
-    # less than or equal (menor o igual) a
-    # otro objeto de la clase
-    def __lte__(self,otroPokemon):
+
+    # El método __le__ define cómo se debe comparar si un objeto es menor o igual que otro objeto de la misma clase
+    def __le__(self, otroPokemon):
         return self.edadDelPokemon <= otroPokemon.edadDelPokemon
 
-    # este metodo es para decirle a python como saber si un objeto de la clase es 
-    # greater than (mayor que)
-    # otro objeto de la clase
-    def __gt__(self,otroPokemon):
+    # El método __gt__ define cómo se debe comparar si un objeto es mayor que otro objeto de la misma clase
+    def __gt__(self, otroPokemon):
         return self.edadDelPokemon > otroPokemon.edadDelPokemon
 
-    # este metodo es para decirle a python como saber si un objeto de la clase es 
-    # greater than or equal (mayor o igual) a
-    # otro objeto de la clase
-    def __gte__(self,otroPokemon):
+    # El método __ge__ define cómo se debe comparar si un objeto es mayor o igual que otro objeto de la misma clase
+    def __ge__(self, otroPokemon):
         return self.edadDelPokemon >= otroPokemon.edadDelPokemon
 
-    # este metodo le dice a nuestro programa cono saber la longitud de un objeto de la clase
+    # El método __len__ define cómo se debe calcular la longitud de un objeto de la clase
     def __len__(self):
         return 3
-    
-    # este metodo le dice a nuestro programa que es lo que tiene que hacer couando se intente llamar 
-    # un objeto de esta clase como si fuera una funcion
-    def __call__(self,*args):
-        print("no puedes llamar a un objeto de la clase Pokemon como si fuera una funcion")
 
-    # este metodo le dice a nuestro programa que es lo que tiene que hacer couando se intente llamar 
-    # una posicion del objeto de esta clase como si fuera una coleccion (ej: lista)
-    def __getitem__(self,index):
-        print("no puedes acceder a posiciones de un objeto de la clase Pokemon como si fuera una coleccion")
+    # El método __call__ define qué debe suceder cuando se intenta llamar a un objeto de la clase como si fuera una función
+    def __call__(self, *args):
+        print("No puedes llamar a un objeto de la clase Pokemon como si fuera una función")
 
-    # este metodo le dice a nuestro programa que es lo que tiene que hacer couando se intente asignar 
-    # un valor en una posicion del objeto de esta clase como si fuera una coleccion (ej: lista)
-    def __setitem__(self,index,x):
-        print("no puedes asignar valores a posiciones de un objeto de la clase Pokemon como si fuera una coleccion")
+    # El método __getitem__ define qué debe suceder cuando se intenta acceder a una posición del objeto como si fuera una colección (ej: lista)
+    def __getitem__(self, index):
+        print("No puedes acceder a posiciones de un objeto de la clase Pokemon como si fuera una colección")
+
+    # El método __setitem__ define qué debe suceder cuando se intenta asignar un valor en una posición del objeto como si fuera una colección (ej: lista)
+    def __setitem__(self, index, x):
+        print("No puedes asignar valores a posiciones de un objeto de la clase Pokemon como si fuera una colección")
 
 
-
-
-
-
-
+# Creamos dos objetos de la clase Pokemon
 pokemon1 = Pokemon("pikachu", "rayo", 11)
-
-pokemon1()
-
-pokemon1[0]
-
-pokemon1[0]=50
-
 pokemon2 = Pokemon("pikachu", "rayo", 10)
 
+# Intentamos llamar al objeto pokemon1 como si fuera una función
+pokemon1()
+
+# Intentamos acceder a una posición del objeto pokemon1 como si fuera una colección
+pokemon1[0]
+
+# Intentamos asignar un valor en una posición del objeto pokemon1 como si fuera una colección
+pokemon1[0] = 50
+
+# Obtenemos la longitud del objeto pokemon1 utilizando el método __len__
 print(len(pokemon1))
 
+# Comparamos si los objetos pokemon1 y pokemon2 son iguales utilizando el método __eq__
 if pokemon1 == pokemon2:
     print("son iguales")
 else:
     print("no son iguales")
 
+# Comparamos si el objeto pokemon1 es mayor que el objeto pokemon2 utilizando el método __gt__
 if pokemon1 > pokemon2:
     print("pokemon1 es mayor")
 else:
     print("pokemon2 es mayor")
 
+# Comparamos si el objeto pokemon1 es menor que el objeto pokemon2 utilizando el método __lt__
 if pokemon1 < pokemon2:
     print("pokemon1 es menor")
 else:
     print("pokemon2 es menor")
 
-# setattr(object, name, value) modifica el valor de una variable del objeto
-setattr(pokemon1,"a","xd")
-# delattr(object, attribute) elimina el atributo del objeto
-delattr(pokemon1,"a")
-# hasattr(object, attribute) pregunta si el objeto tiene un atributo
-print(hasattr(pokemon1,"a"))
+# Utilizamos la función setattr para modificar el valor de una variable del objeto
+setattr(pokemon1, "a", "xd")
+# Utilizamos la función delattr para eliminar un atributo del objeto
+delattr(pokemon1, "a")
+# Utilizamos la función hasattr para preguntar si el objeto tiene un atributo
+print(hasattr(pokemon1, "a"))
 
+# Imprimimos la representación en cadena del objeto pokemon1 utilizando el método __str__
 print(pokemon1)
