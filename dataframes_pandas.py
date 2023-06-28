@@ -97,3 +97,40 @@ print(df_reemplazado)
 print("\nCambio de tipo de datos de la columna 'Edad':")
 df['Edad'] = df['Edad'].astype(float)
 df.info()
+
+# tolist(): Convierte una columna del DataFrame en una lista
+
+# Convertir la columna 'Nombre' en una lista
+lista_nombres = df['Nombre'].tolist()
+print("\nColumna 'Nombre' convertida en lista:")
+print(lista_nombres)
+
+# Convertir la columna 'Edad' en una lista
+lista_edades = df['Edad'].tolist()
+print("\nColumna 'Edad' convertida en lista:")
+print(lista_edades)
+
+# Convertir la columna 'Ciudad' en una lista
+lista_ciudades = df['Ciudad'].tolist()
+print("\nColumna 'Ciudad' convertida en lista:")
+print(lista_ciudades)
+
+# drop_duplicates(): Elimina las filas duplicadas del DataFrame
+print("\nEliminación de filas duplicadas:")
+df_sin_duplicados = df.drop_duplicates()
+print(df_sin_duplicados)
+
+# isnull(): Verifica si hay valores nulos en el DataFrame
+print("\nVerificación de valores nulos:")
+print(df.isnull())
+
+# fillna(): Rellena los valores nulos en el DataFrame con un valor específico
+print("\nRelleno de valores nulos:")
+df_rellenado = df.fillna(0)
+print(df_rellenado)
+
+# apply(): Aplica una función a lo largo de un eje del DataFrame
+print("\nAplicación de una función a una columna:")
+edades_cuadrado = df['Edad'].apply(lambda x: x**2)
+print(edades_cuadrado)
+

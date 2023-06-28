@@ -10,10 +10,11 @@ def funcion1(x):
 
 
 # Establece el estilo de la gráfica como "ggplot"
-plt.style.use("ggplot")
+plt.style.use("bmh")
 # los estilos basicos disponibles para los estilos de grafica son:
 # 'bmh'
 # 'classic'
+# '_mpl-gallery'
 # 'dark_background'
 # 'fast'
 # 'fivethirtyeight'
@@ -38,7 +39,7 @@ plt.style.use("ggplot")
 # 'tableau-colorblind10'
 
 # Crea un array de 100 valores equiespaciados entre 0 y 2*pi
-x = np.linspace(0, 2*np.pi, 100)
+x = np.linspace(0, 2*np.pi, 50)
 
 # Calcula el seno y el coseno de cada valor en el array x
 y1 = np.sin(x)
