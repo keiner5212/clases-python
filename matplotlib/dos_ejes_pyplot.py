@@ -1,40 +1,36 @@
-import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.pyplot as plt
 
-# Generar puntos en el eje x
-x = np.linspace(0, 10, 50)
+# Datos para el eje x
+x = np.linspace(0, 10, 100)
 
-# Generar puntos en el eje y
-# Utilizamos la función np.random.normal para generar números aleatorios con una distribución normal
-# Parámetros de np.random.normal:
-#   - Media: 0
-#   - Desviación estándar: 50
-#   - Tamaño: 50 (generamos 50 puntos)
-y = sorted(np.random.normal(0, 50, 50).tolist(), reverse=False)
+# Datos para el primer eje y
+y1 = np.sin(x)
 
-# Crear una segunda serie de puntos en el eje y (y2) simplemente sumando 1 a cada punto en x
-y2 = x + 1
+# Datos para el segundo eje y
+y2 = np.exp(x)
 
-# Crear una figura para el gráfico
-fig = plt.figure()
+# Crear la figura y los ejes
+fig, ax1 = plt.subplots()
 
-# Añadir un subplot al gráfico (1 fila, 1 columna, índice 1)
-ax1 = fig.add_subplot(1, 1, 1)
+# Graficar los datos en el primer eje y
+ax1.plot(x, y1, 'b-', label='Función seno')
+ax1.set_xlabel('Eje x')
+ax1.set_ylabel('Función seno', color='b')
+ax1.tick_params('y', colors='b')
 
-# Añadir un subplot adicional al gráfico (2 filas, 2 columnas, índice 4)
-ax2 = fig.add_subplot(2, 2, 4)
+# Crear el segundo eje y compartiendo el eje x
+ax2 = ax1.twinx()
 
-# Graficar los puntos (x, y) en el primer subplot
-ax1.plot(x, y, label="ejemplo1")
-ax1.set_ylabel("Eje 1")
+# Graficar los datos en el segundo eje y
+ax2.plot(x, y2, 'r-', label='Función exponencial')
+ax2.set_ylabel('Función exponencial', color='r')
+ax2.tick_params('y', colors='r')
 
-# Graficar los puntos (x, y2) en el segundo subplot
-ax2.plot(x, y2, label="ejemplo2")
-ax2.set_ylabel("Eje 2")
+# Agregar leyendas y título
+ax1.legend(loc='upper left')
+ax2.legend(loc='upper right')
+plt.title('Gráfico con dos ejes y')
 
-# Mostrar una leyenda en ambos subplots
-ax1.legend()
-ax2.legend()
-
-# Mostrar el gráfico
+# Mostrar la gráfica
 plt.show()
