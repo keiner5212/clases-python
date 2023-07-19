@@ -48,7 +48,7 @@ y2 = np.cos(x)
 
 # Crea una gráfica con los valores de x e y1, y1 y y3
 plt.plot(x, y1, label="sen(x)", linewidth=2.0,
-         color="#42ab49", linestyle="dashed")
+         color="#42ab49", linestyle=(5,[10,10]))
 plt.plot(x, y2, label="cos(x)", linewidth=2.0)
 
 # importante
