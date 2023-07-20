@@ -1,3 +1,6 @@
+import sys
+sys.path.append("./")
+
 # Importa el módulo pickle
 import pickle
 # Importa la clase Persona desde el módulo objetos_constructor
