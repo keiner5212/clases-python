@@ -1,23 +1,23 @@
-# Mis Clases de Python
+# Learn Python
 
-Este repositorio contiene una colección de archivos y ejemplos para aprender Python desde cero. A medida que avances, encontrarás información sobre nuevas librerías, utilidades y conceptos avanzados.
+This repository contains a collection of files and examples for learning Python from scratch. As you progress, you will find information about new libraries, utilities, and advanced concepts.
 
-## Contenido
+## Contents
 
-- Introducción a Python
-- Programación orientada a objetos (POO)
-- Lectura de archivos
-- Uso de librerías populares como Pandas, Matplotlib, Numpy
-- Criptografía con cryptography.fernet
-- Cálculo simbólico con Sympy
-- Procesamiento de texto enriquecido con striprtf
-- Creación de interfaces gráficas con Tkinter
-- ¡Y mucho más!
+- Introduction to Python
+- Object-oriented programming (OOP)
+- File reading
+- Using popular libraries such as Pandas, Matplotlib, Numpy
+- Cryptography with cryptography.fernet
+- Symbolic computation with Sympy
+- Rich text processing with striprtf
+- Graphical user interface creation with Tkinter
+- And much more!
 
-## Cómo usar este repositorio
+## How to use this repository
 
-Puedes clonar este repositorio en tu computadora o descargar los archivos individualmente. Cada archivo contiene ejemplos y explicaciones sobre un tema en particular. ¡Explora y aprende a tu ritmo!
+You can clone this repository to your computer or download the files individually. Each file contains examples and explanations about a particular topic. Explore and learn at your own pace!
 
-## Contribuciones
+## Contributions
 
-Si tienes sugerencias o quieres contribuir con nuevos ejemplos o temas, no dudes en hacer un pull request o abrir un issue. ¡Toda contribución es bienvenida!
+If you have suggestions or want to contribute with new examples or topics, feel free to make a pull request or open an issue. All contributions are welcome!
