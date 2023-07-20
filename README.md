@@ -1,4 +1,4 @@
-# Mi Repositorio de Python
+# Mis Clases de Python
 
 Este repositorio contiene una colección de archivos y ejemplos para aprender Python desde cero. A medida que avances, encontrarás información sobre nuevas librerías, utilidades y conceptos avanzados.
 
