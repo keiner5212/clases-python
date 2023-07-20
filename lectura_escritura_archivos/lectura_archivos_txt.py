@@ -1,5 +1,5 @@
 # Abre un archivo en modo lectura y escritura (r+)
-archivo = open("./ejemplo.txt", "r+")
+archivo = open("./recursos/ejemplo.txt", "r+")
 
 # Lee el contenido del archivo y reemplaza los saltos de línea por espacios
 contenido = archivo.read().replace("\n", " ").strip(" ")
@@ -12,7 +12,7 @@ print(contenidoSeparado[1], contenidoSeparado[3])
 archivo.close()
 
 # Abre un archivo en modo lectura y escritura (r+) utilizando la sintaxis with
-with open("./ejemplo.txt", "r+") as archivo:
+with open("./recursos/ejemplo.txt", "r+") as archivo:
     # Lee el contenido del archivo y reemplaza los saltos de línea por espacios
     contenido = archivo.read().replace("\n", " ").strip(" ")
     # Divide el contenido en una lista de palabras

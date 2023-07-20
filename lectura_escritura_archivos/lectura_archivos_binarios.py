@@ -7,13 +7,13 @@
 # rb+: modo de lectura y escritura. Permite leer y escribir en un archivo existente.
 
 #escritura
-archivo = open("./ejemplo.dat", "wb")
+archivo = open("./recursos/ejemplo.dat", "wb")
 contenido = b"hola, esto va a ir en el archivo"
 archivo.write(contenido)
 archivo.close()
 
 #lectura
-archivo = open("./ejemplo.dat", "rb")
+archivo = open("./recursos/ejemplo.dat", "rb")
 contenido = archivo.read()
 archivo.close()
 

@@ -1,6 +1,6 @@
 import pandas as pd
 
-ruta = "./excel.xlsx"
+ruta = "./recursos/excel.xlsx"
 
 # Leer el archivo Excel utilizando pandas
 lectura = pd.read_excel(ruta)

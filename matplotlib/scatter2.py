@@ -9,7 +9,7 @@ plt.style.use('bmh')
 fig, ax = plt.subplots()
 
 # Lee los datos desde un archivo CSV
-informacion = pd.read_csv("./LSV-0&001.csv")
+informacion = pd.read_csv("./recursos/LSV-0&001.csv")
 x = informacion["Cell Potential[V]"].tolist()
 y = informacion[' "Cell Current[A]"'].tolist()
 

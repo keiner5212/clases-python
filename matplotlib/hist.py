@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 # Lee los datos desde un archivo Excel llamado "data.xlsx" y guarda la columna "Age" en una lista llamada 'edades'.
-data = pd.read_excel("data.xlsx")
+data = pd.read_excel("./recursos/data.xlsx")
 edades = data["Age"].tolist()
 
 # Lista de colores para colorear las barras del histograma.
