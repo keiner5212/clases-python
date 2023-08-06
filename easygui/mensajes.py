@@ -2,7 +2,7 @@ import easygui as eg
 
 # Muestra un cuadro de mensaje con un mensaje y un título.
 respuesta = eg.msgbox(msg="Hola, este es un mensaje rápido", title="Mensaje 1",
-                      ok_button="De acuerdo", image="./sandia.png")
+                      ok_button="De acuerdo", image="./recursos/sandia.png")
 print(respuesta)
 
 # Muestra un cuadro de diálogo Continuar/Cancelar.
