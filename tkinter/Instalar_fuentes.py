@@ -7,6 +7,6 @@ sys.path.append("./")
 from otros.instalador_fuentes import install_font
 
 try:
-    install_font("./recursos/fuentes/RuslanDisplay-Regular.ttf")
+    install_font("./recursos/fuentes/Handjet-Light.ttf")
 except InterruptedError as e:
     print(e)

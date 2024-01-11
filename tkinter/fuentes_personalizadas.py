@@ -6,7 +6,7 @@ root.configure(background="gray")
 
 # Configurar estilos de los widgets usando ttk.Style
 styles = ttk.Style()
-mi_fuente = font.Font(family="Tektur Black", size=12)
+mi_fuente = font.Font(family="Handjet Light", size=32)
 styles.configure("NuevaFuente.TLabel", font=mi_fuente,
                  foregroundcolor="#050529")
 
